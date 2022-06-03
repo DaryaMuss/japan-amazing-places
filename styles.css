@@ -208,7 +208,7 @@ html {
 .search-form_field {
     width: 300px;
     background-color: transparent;
-    background: url(./img5/Oval.png) no-repeat left 6px;
+    background: url("./img5/oval.png") no-repeat left 6px;
     background-size: 20px;
     border: 0;
     border-bottom: 2px solid #BFC0C5;
