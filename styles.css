@@ -1,0 +1,888 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+.body {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #102746;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .2s linear;
+    padding-bottom: 20px;
+    z-index: 999;
+}
+
+.header_active {
+    background: #0E1D28;
+}
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.wrapper-full {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    display: block;
+    content: "";
+    width: 250px;
+    height: 3px;
+    background-color: #006DFE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.header_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 55px;
+}
+.header_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header_item {
+    margin-right: 80px;
+}
+/* .header_item:last-child {
+    max-width: 0;
+} */
+.header_link {
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+}
+.header_link:hover, .header_link:focus, .header_link:active {
+    opacity: 75%;
+}
+
+.header_burger {
+    display: none;
+    width: 40px;
+    height: 30px;
+    position: relative;
+}
+
+.burger_line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+}
+
+.burger_line_first {
+    top: 0;
+}
+
+.burger_line_second {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger_line_third {
+    bottom: 0;
+}
+
+/* Header end */
+
+/* Intro */
+
+.intro {
+    min-height: 100vh;
+    background: url(./img5/image5.png) no-repeat center;
+    background-size: cover;
+    padding-top: 260px;
+    padding-bottom: 320px;
+    
+}
+
+.intro_title {
+    max-width: 630px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin-bottom: 22px;
+}
+
+.intro_subtitle {
+    max-width: 545px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+
+.search-form_info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form_field {
+    width: 300px;
+    background-color: transparent;
+    background: url(./img5/Oval.png) no-repeat left 6px;
+    background-size: 20px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    margin-right: 60px;
+    padding-left: 45px;
+    padding-bottom: 25px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.search-form_field::placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.search-form_submit {
+    padding: 15px 40px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    background: #1B7DFF;
+    border: 0;
+}
+
+.search-form_submit:hover, .search-form_submit:focus, .search-form_submit:active {
+    background: #0d5cc6;
+}
+
+/* Intro end */
+
+/*Benefits*/
+
+.benefits {
+    margin-bottom: 130px;
+}
+
+.benefits_wrap {
+    max-width: 1260px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    position: relative;
+
+}
+
+.benefits_title {
+    width: 100%;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    padding: 94px 100px 90px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: #FFFFFF;
+}
+
+.benefits_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 55px;
+    padding: 0 100px;
+}
+
+.benefits_card {
+    grid-column: span 1;
+    margin-bottom: 110px;
+}
+
+.benefits_cart-pic {
+    max-width: 65px;
+    margin-bottom: 36px;
+}
+
+.benefits_card-thumb {
+    display: block;
+}
+
+.benefits_card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 26px;
+}
+
+.benefits_card-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.benefits_card-more {
+    display: inline-block;
+    padding-right: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px; 
+    color: #006DFE;
+    text-decoration: none;
+    background: url(./img5/11.png) no-repeat 95% center;
+    transition: .2s all;
+}
+
+.benefits_card-more:hover, .benefits_card-more:focus {
+    background: url(./img5/11.png) no-repeat right center;
+}
+
+/*Benefits end*/
+
+/*Places*/
+
+.places {
+    margin-bottom: 130px;
+}
+
+.places_caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.places_title {
+    margin-right: 15px;
+}
+
+.places_view-all {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    background: url(./img5/11.png) no-repeat right center;
+    padding-right: 60px;
+}
+
+.places_cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.places_card {
+    position: relative;
+    overflow: hidden;
+}
+
+.places_card::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.places_card:hover  .places_card-pic {
+    transform: scale(1.05);
+}
+
+.places_card-title {
+    /*font-weight: 700;*/
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    z-index: 3;
+}
+
+
+.places_card-size {
+    grid-column: span 3;
+}
+
+.places_card_size_lg {
+    grid-column: span 3;
+    
+}
+
+.places_card_size_s {
+    grid-column: span 2;
+}
+
+.places_card-pic {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: .15s all;
+}
+
+.places_card-pic_size_lg {
+    height: 350px;
+    object-fit: cover;
+}
+
+.places_card-pic_size_s {
+    height: 280px;
+    object-fit: cover;
+}
+
+.places_card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+/*Places end*/
+
+/*Tour*/
+
+.tours {
+    margin-bottom: 140px;
+}
+
+.tours_tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 110px;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.tour_info {
+    padding-left: 45px;
+}
+
+.tour_title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: #102746;
+    margin-bottom: 85px;
+}
+
+.tour_desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: 60px;
+}
+
+.tour_more {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #006DFE;
+    text-decoration: none;
+    background: url(./img5/11.png) no-repeat right center;
+    padding-right: 60px;
+}
+
+.tour_thumb {
+    max-width: 100%;
+}
+
+/*Tour end*/
+
+/*Top*/
+
+.top {
+    margin-bottom: 85px
+}
+
+.top-title {
+    margin-bottom: 55px;
+}
+
+.top_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 57px;
+    grid-row-gap: 57px;
+}
+
+.top_card_pic {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.top_card {
+    display: flex;
+    flex-direction: column;
+    /* grid-column: span 2; */
+}
+
+.top_card-thumb {
+    width: 100%;
+}
+
+.top_cards-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+}
+
+.top_card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 0 auto 0 0;
+}
+
+.top_card-likes {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 20px;
+    background: url(./img5/s1.png) no-repeat right;
+    margin-right: 15px;
+}
+
+.top_card-comments {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 23px;
+    background: url(./img5/s2.png) no-repeat right;
+}
+
+.top_card-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: 30px;
+}
+
+.top_card-more {
+    width: 118px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 20px;
+    background: #1B7DFF;
+}
+
+.top_card-more:hover, .top_card-more:focus, .top_card-more:active {
+    background: #0d5cc6;
+}
+
+/*Top end*/
+
+/*Videos*/
+
+.videos {
+    width: 100%;
+}
+
+.videos_wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video_item {
+    padding-top: 56.25%;
+}
+
+.video_element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Videos end*/
+
+/*Footer*/
+
+.footer {
+    background: #0E1D28;
+    padding: 120px 0;
+}
+
+.footer_item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_logo {
+    width: 50%;
+}
+
+.footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer_menu-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.footer_menu-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer_menu-link:hover, .footer_menu-link:active,  .footer_menu-link:focus {
+    opacity: 0.75;
+}
+
+/*Footer end*/
+
+/*Media*/
+
+@media screen and (max-width: 965px) {
+
+    .benefits {
+        margin-bottom: 75px;
+    }
+
+    .benefits_card {
+        margin-bottom: 60px;
+    }
+
+    .search-form_field {
+        margin-bottom: 25px;
+    }
+    .benefits_cards {
+        padding: 0 15px;
+        grid-column-gap: 35px;
+    }
+    .benefits_title {
+        padding: 55px 15px;
+    }
+    .benefits_wrap {
+        box-shadow: none;
+    }
+
+    .places_card_size_lg {
+        grid-column: span 6;
+    }
+
+    .places_card_size_s {
+        grid-column: span 6;
+    }
+
+    .tours_tour {
+        grid-column-gap: 35px;
+    }
+
+    .tour_info {
+        padding-left: 0;
+    }
+
+    .tour_title {
+        margin-bottom: 15px;
+    }
+
+    .tour_desc {
+        margin-bottom: 15px;
+    }
+
+    .top_cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 25px;
+        grid-row-gap: 55px;
+    }
+
+    .top_card_pic {
+        margin-bottom: 25px;
+    }
+
+    .footer {
+        padding: 60px, 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    .section-title::after {
+        width: 135px;
+    }
+
+    .header_burger {
+        display: block;
+    }
+
+    .header_wrapper {
+        padding-top: 28px;
+    }
+
+    .header_nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 10;
+        padding: 75px;
+        transform: translateX(-100%);
+        transition: .2s all linear;
+    }
+
+    .header_nav-active {
+        transform: translateX(0);
+    }
+
+    .header_item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .header_item:last-child {
+        margin-bottom: 0;
+    }
+
+    .header_link {
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    .header_nav-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+    }
+
+    .header_nav-close-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 50%;
+    }
+
+    .header_nav-close-line:first-child {
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    
+    .header_nav-close-line:last-child {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .intro {
+        padding-top: 150px;
+    }
+
+    .intro_title {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .search-form_field {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .benefits {
+        margin-bottom: 35px;
+    }
+
+    .benefits_card {
+        grid-column: span 3;
+        margin-bottom: 30px;
+    }
+
+    .benefits_cart-pic {
+        margin-bottom: 20px;
+    }
+
+    .benefits_card-title {
+        margin-bottom: 12px;
+    }
+
+    .benefits_card-desc {
+        margin-bottom: 20px;
+    }
+
+    .places_card-pic_size_lg, .places_card-pic_size_s {
+        height: 240px;
+    }
+
+    .tours {
+        margin-bottom: 76px;
+    }
+
+    .tour_pic {
+        margin-bottom: 12px;
+    }
+
+    .tour_pic-mob {
+        grid-row-start: -1;
+    }
+
+    .top {
+        margin-bottom: 76px;
+    }
+
+    .top_card {
+        grid-column: span 6;
+    }
+
+    .top_card-desc {
+        margin-bottom: 15px;
+    }
+
+    .footer_logo {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer_nav {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .header_nav {
+        padding: 75px 30px;
+    }
+
+    .tour-info {
+        margin-bottom: 15px;;
+    } 
+
+    .tours_tour {
+        grid-template-columns: 2fr;
+        margin-bottom: 25px;
+    }
+
+    .tour_more {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+}
+    
+/*Media end*/
+
