@@ -176,7 +176,7 @@ html {
 
 .intro {
     min-height: 100vh;
-    background: url(./img5/image5.png) no-repeat center;
+    background: url("./img5/image5.png") no-repeat center;
     background-size: cover;
     padding-top: 260px;
     padding-bottom: 320px;
